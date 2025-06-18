@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CRUV - Creative Design Studio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>
+tailwind.config={
+theme:{
+extend:{
+colors:{
+primary:'#3b82f6',
+secondary:'#10b981'
+},
+borderRadius:{
+'none':'0px',
+'sm':'4px',
+DEFAULT:'8px',
+'md':'12px',
+'lg':'16px',
+'xl':'20px',
+'2xl':'24px',
+'3xl':'32px',
+'full':'9999px',
+'button':'8px'
+}
+}
+}
+}
+</script>
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+background-color: #0f0f0f;
+color: #ffffff;
+}
+.hero-section {
+background-image: url('https://readdy.ai/api/search-image?query=abstract%2520dark%2520pattern%2520background%2520with%2520subtle%2520geometric%2520shapes%2520and%2520lines%2520creating%2520a%2520modern%2520tech%2520feel%2520perfect%2520for%2520a%2520creative%2520design%2520studio%2520website%2520hero%2520section%2520with%2520dark%2520black%2520background&width=1600&height=800&seq=1&orientation=landscape');
+background-size: cover;
+background-position: center;
+}
+.stats-card {
+background-color: #1a1a1a;
+transition: transform 0.3s ease;
+}
+.stats-card:hover {
+transform: translateY(-5px);
+}
+.service-tag {
+transition: all 0.3s ease;
+}
+.service-tag:hover {
+transform: scale(1.05);
+}
+input:focus, button:focus {
+outline: none;
+}
+.team-section {
+position: relative;
+}
+.team-overlay {
+position: absolute;
+bottom: 20px;
+right: 20px;
+background-color: #3b82f6;
+padding: 12px 20px;
+border-radius: 8px;
+color: white;
+font-weight: bold;
+}
+.service-card {
+transition: transform 0.3s ease;
+}
+.service-card:hover {
+transform: translateY(-5px);
+}
+</style>
+</head>
+<body>
+<!-- Header Navigation -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-black bg-opacity-90 backdrop-blur-sm">
+<nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+<div class="flex items-center">
+<a href="#" class="text-2xl font-bold tracking-wider text-white">CRUV</a>
+</div>
+<div class="hidden md:flex space-x-8">
+<a href="#" class="text-white hover:text-primary transition-colors">Home</a>
+<a href="#" class="text-white hover:text-primary transition-colors">About</a>
+<a href="#" class="text-white hover:text-primary transition-colors">Services</a>
+<a href="#" class="text-white hover:text-primary transition-colors">Portfolio</a>
+<a href="#" class="text-white hover:text-primary transition-colors">Blog</a>
+<a href="#" class="text-white hover:text-primary transition-colors">Contact</a>
+</div>
+<div class="md:hidden w-6 h-6 flex items-center justify-center">
+<i class="ri-menu-line text-white text-2xl"></i>
+</div>
+</nav>
+</header>
+<!-- Hero Section -->
+<section class="hero-section pt-28 pb-16 md:pt-40 md:pb-24">
+<div class="container mx-auto px-6">
+<div class="flex flex-col md:flex-row items-center justify-between">
+<div class="w-full md:w-3/5 mb-10 md:mb-0">
+<h1 class="text-5xl md:text-7xl font-bold leading-tight mb-6">
+CRUV <br>
+<span class="flex items-center">
+CREATIVE
+<div class="w-12 h-12 mx-3 flex items-center justify-center">
+<i class="ri-arrow-right-down-line text-3xl text-primary"></i>
+</div>
+</span>
+DESIGN STUDIO
+</h1>
+<p class="text-gray-300 text-lg max-w-xl mb-8">
+Your digital partner in creating exceptional experiences. We bring your ideas to life through innovative design and cutting-edge technology, all with a touch of creativity.
+</p>
+<div class="flex space-x-4">
+<button class="bg-primary hover:bg-blue-600 text-white px-6 py-3 rounded-button whitespace-nowrap transition-colors">
+Explore Projects
+</button>
+<button class="border border-white hover:border-primary hover:text-primary text-white px-6 py-3 rounded-button whitespace-nowrap transition-colors">
+Get in Touch
+</button>
+</div>
+</div>
+<div class="w-full md:w-2/5">
+<div class="bg-gray-800 p-4 rounded">
+<div class="relative overflow-hidden rounded">
+<img src="https://readdy.ai/api/search-image?query=modern%2520abstract%2520design%2520project%2520with%2520vibrant%2520orange%2520and%2520teal%2520colors%2520on%2520a%2520clean%2520background%2520showing%2520a%2520creative%2520design%2520concept%2520for%2520a%2520digital%2520product%2520with%2520geometric%2520shapes&width=600&height=400&seq=2&orientation=landscape"
+alt="Featured Project"
+class="w-full h-auto object-cover rounded">
+<div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4">
+<span class="text-xs text-primary font-medium">Featured Projects</span>
+<div class="flex justify-between items-center mt-1">
+<h3 class="text-white font-semibold">Brand Identity Redesign</h3>
+<div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
+<i class="ri-arrow-right-line"></i>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Action Bar -->
+<section class="bg-gray-900">
+<div class="container mx-auto">
+<div class="grid grid-cols-3">
+<div class="bg-blue-600 py-4 px-6 flex justify-center items-center">
+<span class="text-white font-medium">EXPLORE DESIGNS</span>
+</div>
+<div class="bg-lime-400 py-4 px-6 flex justify-center items-center">
+<span class="text-black font-medium">→</span>
+</div>
+<div class="bg-gray-800 py-4 px-6 flex justify-center items-center">
+<span class="text-white font-medium">PORTFOLIO</span>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="py-20 bg-black">
+<div class="container mx-auto px-6">
+<div class="flex flex-col md:flex-row items-start justify-between">
+<div class="w-full md:w-1/3 mb-8 md:mb-0">
+<h2 class="text-2xl font-medium text-gray-400 mb-2">About Studio</h2>
+</div>
+<div class="w-full md:w-2/3">
+<h3 class="text-3xl md:text-4xl font-bold mb-8">We are a creative studio that loves making amazing websites & cool products. We're really good at creating brands, designing cool stuff, and making things work just right. Our approach is all about understanding your needs to bringing ideas to life</h3>
+<button class="bg-white text-black hover:bg-gray-200 px-6 py-3 rounded-button whitespace-nowrap transition-colors mb-12">
+Contact Us →
+</button>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="stats-card p-8 rounded">
+<h4 class="text-4xl font-bold mb-2">2012</h4>
+<p class="text-gray-400">Founding Year</p>
+</div>
+<div class="stats-card p-8 rounded">
+<h4 class="text-4xl font-bold mb-2">100+</h4>
+<p class="text-gray-400">Completed Projects</p>
+</div>
+<div class="stats-card p-8 rounded">
+<h4 class="text-4xl font-bold mb-2">15+</h4>
+<p class="text-gray-400">Years of Experience</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Team Section -->
+<section class="team-section py-10">
+<div class="container mx-auto px-6">
+<div class="relative">
+<img src="https://readdy.ai/api/search-image?query=two%2520professional%2520business%2520people%2520having%2520a%2520meeting%2520on%2520an%2520orange%2520couch%2520discussing%2520design%2520projects%2520on%2520a%2520laptop%2520in%2520a%2520modern%2520office%2520environment%2520with%2520warm%2520lighting%2520and%2520professional%2520attire&width=1200&height=600&seq=3&orientation=landscape"
+alt="Team Meeting"
+class="w-full h-auto object-cover rounded">
+<div class="team-overlay">
+<div class="text-xl font-bold">15+</div>
+<div class="text-sm">Years of professional experience in creative design</div>
+</div>
+</div>
+<div class="flex flex-wrap gap-3 mt-4">
+<div class="service-tag bg-indigo-600 text-white px-4 py-2 rounded-full flex items-center">
+<div class="w-6 h-6 flex items-center justify-center mr-2">
+<i class="ri-code-line"></i>
+</div>
+WEBFLOW DESIGN
+</div>
+<div class="service-tag bg-orange-500 text-white px-4 py-2 rounded-full flex items-center">
+<div class="w-6 h-6 flex items-center justify-center mr-2">
+<i class="ri-smartphone-line"></i>
+</div>
+APP DESIGN
+</div>
+<div class="service-tag bg-purple-600 text-white px-4 py-2 rounded-full flex items-center">
+<div class="w-6 h-6 flex items-center justify-center mr-2">
+<i class="ri-lightbulb-line"></i>
+</div>
+CREATIVE THINKING
+</div>
+<div class="service-tag bg-pink-600 text-white px-4 py-2 rounded-full flex items-center">
+<div class="w-6 h-6 flex items-center justify-center mr-2">
+<i class="ri-layout-grid-line"></i>
+</div>
+NO-CODE DEVELOPMENT
+</div>
+<div class="service-tag bg-red-500 text-white px-4 py-2 rounded-full flex items-center">
+<div class="w-6 h-6 flex items-center justify-center mr-2">
+<i class="ri-code-s-slash-line"></i>
+</div>
+APP DEVELOPMENT
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-20 bg-black">
+<div class="container mx-auto px-6">
+<div class="flex flex-col md:flex-row items-center justify-between mb-12">
+<div class="w-full md:w-1/2 mb-6 md:mb-0">
+<span class="inline-block bg-lime-400 text-black px-4 py-1 rounded-full text-sm font-medium mb-4">SERVICES</span>
+<h2 class="text-5xl md:text-6xl font-bold">SERVICES</h2>
+</div>
+<div class="w-full md:w-1/2 flex justify-start md:justify-end">
+<p class="text-gray-400 max-w-md">
+Our comprehensive range of services designed to transform your ideas into impactful digital experiences.
+</p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+<!-- Service 1 -->
+<div class="service-card">
+<h3 class="text-3xl font-bold mb-4">Branding Identity</h3>
+<p class="text-gray-400 mb-6">
+We create distinctive brand identities that resonate with your audience and stand out in the market. Our approach combines strategic thinking with creative execution.
+</p>
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="bg-gray-800 text-white text-xs px-3 py-1 rounded-full">Logo Design</span>
+<span class="bg-gray-800 text-white text-xs px-3 py-1 rounded-full">Brand Guidelines</span>
+<span class="bg-gray-800 text-white text-xs px-3 py-1 rounded-full">Visual Identity</span>
+<span class="bg-gray-800 text-white text-xs px-3 py-1 rounded-full">Brand Strategy</span>
+</div>
+<div class="mt-6">
+<img src="https://readdy.ai/api/search-image?query=abstract%2520branding%2520elements%2520with%2520warm%2520orange%2520and%2520beige%2520tones%2520showing%2520minimal%2520logo%2520designs%2520business%2520cards%2520and%2520brand%2520identity%2520elements%2520on%2520a%2520clean%2520background%2520professional%2520photography&width=600&height=400&seq=4&orientation=landscape"
+alt="Branding Identity"
+class="w-full h-auto object-cover rounded">
+</div>
+</div>
+<!-- Service 2 -->
+<div class="service-card">
+<h3 class="text-3xl font-bold mb-4">Web Development</h3>
+<p class="text-gray-400 mb-6">
+We build responsive, high-performance websites that deliver exceptional user experiences. Our development process focuses on clean code, security, and scalability.
+</p>
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="bg-gray-800 text-white text-xs px-3 py-1 rounded-full">Frontend Development</span>
+<span class="bg-gray-800 text-white text-xs px-3 py-1 rounded-full">Backend Systems</span>
+<span class="bg-gray-800 text-white text-xs px-3 py-1 rounded-full">E-commerce</span>
+<span class="bg-gray-800 text-white text-xs px-3 py-1 rounded-full">CMS Integration</span>
+</div>
+<div class="mt-6">
+<img src="https://readdy.ai/api/search-image?query=modern%2520web%2520development%2520concept%2520with%2520code%2520on%2520screen%2520and%2520purple%2520lighting%2520showing%2520responsive%2520website%2520design%2520across%2520devices%2520in%2520a%2520professional%2520studio%2520environment%2520with%2520clean%2520minimal%2520aesthetic&width=600&height=400&seq=5&orientation=landscape"
+alt="Web Development"
+class="w-full h-auto object-cover rounded">
+</div>
+</div>
+<!-- Service 3 -->
+<div class="service-card">
+<h3 class="text-3xl font-bold mb-4">Creative Direction</h3>
+<p class="text-gray-400 mb-6">
+Our creative direction services provide the strategic vision and artistic guidance needed to elevate your brand's visual storytelling and maintain consistency across all touchpoints.
+</p>
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="bg-gray-800 text-white text-xs px-3 py-1 rounded-full">Art Direction</span>
+<span class="bg-gray-800 text-white text-xs px-3 py-1 rounded-full">Visual Storytelling</span>
+<span class="bg-gray-800 text-white text-xs px-3 py-1 rounded-full">Campaign Concepts</span>
+<span class="bg-gray-800 text-white text-xs px-3 py-1 rounded-full">Creative Strategy</span>
+</div>
+<div class="mt-6">
+<img src="https://readdy.ai/api/search-image?query=creative%2520direction%2520concept%2520with%2520mood%2520boards%2520color%2520palettes%2520and%2520design%2520elements%2520arranged%2520on%2520a%2520table%2520in%2520a%2520modern%2520design%2520studio%2520with%2520warm%2520lighting%2520and%2520professional%2520creative%2520atmosphere&width=600&height=400&seq=6&orientation=landscape"
+alt="Creative Direction"
+class="w-full h-auto object-cover rounded">
+</div>
+</div>
+<!-- Service 4 -->
+<div class="service-card">
+<h3 class="text-3xl font-bold mb-4">UX/UI Design</h3>
+<p class="text-gray-400 mb-6">
+We create intuitive, engaging user experiences that balance aesthetic appeal with functional design. Our user-centered approach ensures your digital products are both beautiful and usable.
+</p>
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="bg-gray-800 text-white text-xs px-3 py-1 rounded-full">User Research</span>
+<span class="bg-gray-800 text-white text-xs px-3 py-1 rounded-full">Wireframing</span>
+<span class="bg-gray-800 text-white text-xs px-3 py-1 rounded-full">Prototyping</span>
+<span class="bg-gray-800 text-white text-xs px-3 py-1 rounded-full">Interface Design</span>
+</div>
+<div class="mt-6">
+<img src="https://readdy.ai/api/search-image?query=modern%2520UI%2520UX%2520design%2520process%2520showing%2520wireframes%2520prototypes%2520and%2520final%2520designs%2520on%2520screens%2520with%2520a%2520clean%2520organized%2520workspace%2520in%2520a%2520professional%2520design%2520studio%2520with%2520subtle%2520lighting&width=600&height=400&seq=7&orientation=landscape"
+alt="UX/UI Design"
+class="w-full h-auto object-cover rounded">
+</div>
+</div>
+</div>
+<div class="mt-12 text-center">
+<button class="bg-white text-black hover:bg-gray-200 px-8 py-3 rounded-button whitespace-nowrap transition-colors">
+View All Services →
+</button>
+</div>
+</div>
+</section>
+<!-- Selected Works Section -->
+<section class="py-20 bg-black">
+<div class="container mx-auto px-6">
+<div class="flex flex-col md:flex-row items-center justify-between mb-12">
+<div class="w-full md:w-1/2 mb-6 md:mb-0">
+<span class="inline-block bg-lime-400 text-black px-4 py-1 rounded-full text-sm font-medium mb-4">PORTFOLIO</span>
+<h2 class="text-5xl md:text-6xl font-bold">SELECTED WORKS</h2>
+</div>
+<div class="w-full md:w-1/2 flex justify-start md:justify-end">
+<p class="text-gray-400 max-w-md">
+Our latest projects showcase our expertise in design, development, and creative solutions.
+</p>
+</div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-4 mb-12">
+<div class="relative group overflow-hidden rounded">
+<img src="https://readdy.ai/api/search-image?query=modern%2520packaging%2520design%2520for%2520luxury%2520product%2520with%2520orange%2520box%2520and%2520minimal%2520branding%2520elements%2520on%2520clean%2520background&width=400&height=300&seq=8&orientation=landscape" alt="Packaging Design" class="w-full h-48 object-cover">
+<div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+<span class="text-white font-medium">Packaging Design</span>
+</div>
+</div>
+<div class="relative group overflow-hidden rounded">
+<img src="https://readdy.ai/api/search-image?query=modern%2520mobile%2520app%2520interface%2520design%2520with%2520blue%2520color%2520scheme%2520and%2520clean%2520minimal%2520layout&width=400&height=300&seq=9&orientation=landscape" alt="Mobile App Design" class="w-full h-48 object-cover">
+<div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+<span class="text-white font-medium">Mobile App Design</span>
+</div>
+</div>
+<div class="relative group overflow-hidden rounded">
+<img src="https://readdy.ai/api/search-image?query=premium%2520product%2520photography%2520of%2520tech%2520gadget%2520with%2520dramatic%2520lighting%2520and%2520minimal%2520setup&width=400&height=300&seq=10&orientation=landscape" alt="Product Photography" class="w-full h-48 object-cover">
+<div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+<span class="text-white font-medium">Product Photography</span>
+</div>
+</div>
+<div class="relative group overflow-hidden rounded">
+<img src="https://readdy.ai/api/search-image?query=brand%2520identity%2520design%2520with%2520modern%2520logo%2520and%2520stationery%2520items%2520on%2520clean%2520background&width=400&height=300&seq=11&orientation=landscape" alt="Brand Identity" class="w-full h-48 object-cover">
+<div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+<span class="text-white font-medium">Brand Identity</span>
+</div>
+</div>
+<div class="relative group overflow-hidden rounded">
+<img src="https://readdy.ai/api/search-image?query=digital%2520product%2520design%2520showing%2520wireless%2520earbuds%2520with%2520red%2520color%2520on%2520minimal%2520background&width=400&height=300&seq=12&orientation=landscape" alt="Digital Product Design" class="w-full h-48 object-cover">
+<div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+<span class="text-white font-medium">Digital Product Design</span>
+</div>
+</div>
+<div class="relative group overflow-hidden rounded">
+<img src="https://readdy.ai/api/search-image?query=website%2520design%2520mockup%2520on%2520modern%2520devices%2520with%2520clean%2520interface%2520and%2520professional%2520layout&width=400&height=300&seq=13&orientation=landscape" alt="Website Design" class="w-full h-48 object-cover">
+<div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4">
+<span class="text-white font-medium">Website Design</span>
+</div>
+</div>
+</div>
+<div class="text-center">
+<button class="bg-white text-black hover:bg-gray-200 px-8 py-3 rounded-button whitespace-nowrap transition-colors">
+View All Projects →
+</button>
+</div>
+</div>
+</section>
+<!-- Testimonials Section -->
+<section class="py-20 bg-black">
+<div class="container mx-auto px-6">
+<div class="flex flex-col md:flex-row items-center justify-between mb-12">
+<div class="w-full md:w-1/2 mb-6 md:mb-0">
+<span class="inline-block bg-lime-400 text-black px-4 py-1 rounded-full text-sm font-medium mb-4">TESTIMONIALS</span>
+<h2 class="text-5xl md:text-6xl font-bold">WHAT PEOPLE SAY</h2>
+</div>
+<div class="w-full md:w-1/2 flex justify-start md:justify-end">
+<p class="text-gray-400 max-w-md">
+Hear from our clients about their experiences working with our creative team.
+</p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-gray-900 p-8 rounded">
+<div class="flex items-center mb-6">
+<img src="https://readdy.ai/api/search-image?query=professional%2520headshot%2520of%2520female%2520executive%2520with%2520confident%2520smile%2520on%2520neutral%2520background&width=100&height=100&seq=14&orientation=squarish" alt="Sarah Mitchell" class="w-16 h-16 rounded-full object-cover">
+<div class="ml-4">
+<h4 class="text-lg font-semibold">Sarah Mitchell</h4>
+<p class="text-gray-400">Marketing Director, TechFlow</p>
+</div>
+</div>
+<p class="text-gray-300 mb-6">"Working with CRUV was a game-changer for our brand. Their creative direction and attention to detail transformed our digital presence completely. The team's professionalism and innovative approach exceeded our expectations."</p>
+<div class="flex">
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+</div>
+</div>
+<div class="bg-gray-900 p-8 rounded">
+<div class="flex items-center mb-6">
+<img src="https://readdy.ai/api/search-image?query=professional%2520headshot%2520of%2520male%2520entrepreneur%2520with%2520warm%2520smile%2520on%2520neutral%2520background&width=100&height=100&seq=15&orientation=squarish" alt="David Anderson" class="w-16 h-16 rounded-full object-cover">
+<div class="ml-4">
+<h4 class="text-lg font-semibold">David Anderson</h4>
+<p class="text-gray-400">CEO, Innovate Solutions</p>
+</div>
+</div>
+<p class="text-gray-300 mb-6">"The team at CRUV demonstrated exceptional creativity and technical expertise. They not only delivered a stunning website but also provided valuable insights that helped improve our user experience significantly."</p>
+<div class="flex">
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+</div>
+</div>
+<div class="bg-gray-900 p-8 rounded">
+<div class="flex items-center mb-6">
+<img src="https://readdy.ai/api/search-image?query=professional%2520headshot%2520of%2520female%2520business%2520leader%2520with%2520natural%2520smile%2520on%2520neutral%2520background&width=100&height=100&seq=16&orientation=squarish" alt="Emily Zhang" class="w-16 h-16 rounded-full object-cover">
+<div class="ml-4">
+<h4 class="text-lg font-semibold">Emily Zhang</h4>
+<p class="text-gray-400">Product Manager, DesignHub</p>
+</div>
+</div>
+<p class="text-gray-300 mb-6">"CRUV's approach to our brand identity project was refreshingly innovative. They captured our vision perfectly and delivered a cohesive brand system that has helped us stand out in our market."</p>
+<div class="flex">
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+<i class="ri-star-fill text-yellow-400"></i>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Articles Section -->
+<section class="py-20 bg-black">
+<div class="container mx-auto px-6">
+<div class="flex flex-col md:flex-row items-center justify-between mb-12">
+<div class="w-full md:w-1/2 mb-6 md:mb-0">
+<span class="inline-block bg-lime-400 text-black px-4 py-1 rounded-full text-sm font-medium mb-4">INSIGHTS</span>
+<h2 class="text-5xl md:text-6xl font-bold">LATEST ARTICLES</h2>
+</div>
+<div class="w-full md:w-1/2 flex justify-start md:justify-end">
+<p class="text-gray-400 max-w-md">
+Explore our latest thoughts on design, development, and creative industry trends.
+</p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<article class="group">
+<div class="overflow-hidden rounded mb-6">
+<img src="https://readdy.ai/api/search-image?query=modern%2520design%2520workspace%2520with%2520creative%2520tools%2520and%2520minimal%2520setup%2520on%2520desk%2520professional%2520photography&width=600&height=400&seq=17&orientation=landscape" alt="Design Trends" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+</div>
+<div class="mb-4">
+<span class="text-primary text-sm">Design Trends</span>
+<span class="text-gray-400 text-sm"> • June 10, 2025</span>
+</div>
+<h3 class="text-xl font-bold mb-2 group-hover:text-primary transition-colors">The Evolution of Digital Design: Trends to Watch in 2025</h3>
+<p class="text-gray-400 mb-4">Exploring the latest design trends shaping the digital landscape and how they impact user experience.</p>
+<a href="#" class="text-white flex items-center hover:text-primary transition-colors">
+Read More
+<i class="ri-arrow-right-line ml-2"></i>
+</a>
+</article>
+<article class="group">
+<div class="overflow-hidden rounded mb-6">
+<img src="https://readdy.ai/api/search-image?query=modern%2520mobile%2520app%2520development%2520concept%2520with%2520devices%2520and%2520code%2520on%2520screen%2520professional%2520photography&width=600&height=400&seq=18&orientation=landscape" alt="Development" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+</div>
+<div class="mb-4">
+<span class="text-primary text-sm">Development</span>
+<span class="text-gray-400 text-sm"> • June 8, 2025</span>
+</div>
+<h3 class="text-xl font-bold mb-2 group-hover:text-primary transition-colors">Building Scalable Web Applications: Best Practices and Tips</h3>
+<p class="text-gray-400 mb-4">Key insights into creating robust and scalable web applications that stand the test of time.</p>
+<a href="#" class="text-white flex items-center hover:text-primary transition-colors">
+Read More
+<i class="ri-arrow-right-line ml-2"></i>
+</a>
+</article>
+<article class="group">
+<div class="overflow-hidden rounded mb-6">
+<img src="https://readdy.ai/api/search-image?query=creative%2520branding%2520process%2520with%2520mood%2520boards%2520and%2520design%2520elements%2520on%2520table%2520professional%2520photography&width=600&height=400&seq=19&orientation=landscape" alt="Branding" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+</div>
+<div class="mb-4">
+<span class="text-primary text-sm">Branding</span>
+<span class="text-gray-400 text-sm"> • June 5, 2025</span>
+</div>
+<h3 class="text-xl font-bold mb-2 group-hover:text-primary transition-colors">The Art of Brand Storytelling in the Digital Age</h3>
+<p class="text-gray-400 mb-4">How to craft compelling brand narratives that resonate with modern audiences.</p>
+<a href="#" class="text-white flex items-center hover:text-primary transition-colors">
+Read More
+<i class="ri-arrow-right-line ml-2"></i>
+</a>
+</article>
+</div>
+<div class="mt-12 text-center">
+<button class="bg-white text-black hover:bg-gray-200 px-8 py-3 rounded-button whitespace-nowrap transition-colors">
+View All Articles →
+</button>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-20 bg-gradient-to-r from-blue-900 to-indigo-900">
+<div class="container mx-auto px-6 text-center">
+<h2 class="text-4xl md:text-5xl font-bold mb-6">Ready to transform your ideas into reality?</h2>
+<p class="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
+Let's collaborate to create something exceptional that elevates your brand and engages your audience.
+</p>
+<div class="flex flex-col sm:flex-row justify-center gap-4">
+<button class="bg-white text-black hover:bg-gray-200 px-8 py-4 rounded-button whitespace-nowrap transition-colors">
+Start a Project
+</button>
+<button class="border border-white text-white hover:bg-white hover:bg-opacity-10 px-8 py-4 rounded-button whitespace-nowrap transition-colors">
+View Our Work
+</button>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-black pt-16 pb-8">
+<div class="container mx-auto px-6">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-16">
+<div>
+<a href="#" class="text-3xl font-bold tracking-wider text-white mb-6 inline-block">CRUV</a>
+<p class="text-gray-400 mb-6">
+Transforming ideas into exceptional digital experiences since 2012.
+</p>
+<div class="flex space-x-4">
+<a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition-colors">
+<i class="ri-instagram-line text-white"></i>
+</a>
+<a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition-colors">
+<i class="ri-twitter-x-line text-white"></i>
+</a>
+<a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition-colors">
+<i class="ri-linkedin-line text-white"></i>
+</a>
+<a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition-colors">
+<i class="ri-behance-line text-white"></i>
+</a>
+</div>
+</div>
+<div>
+<h3 class="text-lg font-semibold mb-6">Services</h3>
+<ul class="space-y-3">
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Branding Identity</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Web Development</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Creative Direction</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">UX/UI Design</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">App Development</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-lg font-semibold mb-6">Company</h3>
+<ul class="space-y-3">
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Our Work</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Careers</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Blog</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-lg font-semibold mb-6">Newsletter</h3>
+<p class="text-gray-400 mb-4">Subscribe to our newsletter to get updates on our latest projects and insights.</p>
+<div class="flex">
+<input type="email" placeholder="Your email" class="bg-gray-800 border-none text-white px-4 py-3 rounded-l-button w-full">
+<button class="bg-primary hover:bg-blue-600 text-white px-4 py-3 rounded-r-button whitespace-nowrap transition-colors">
+Subscribe
+</button>
+</div>
+</div>
+</div>
+<div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+<p class="text-gray-500 mb-4 md:mb-0">© 2025 CRUV Creative Studio. All rights reserved.</p>
+<div class="flex space-x-6">
+<a href="#" class="text-gray-500 hover:text-white transition-colors">Privacy Policy</a>
+<a href="#" class="text-gray-500 hover:text-white transition-colors">Terms of Service</a>
+<a href="#" class="text-gray-500 hover:text-white transition-colors">Cookies Policy</a>
+</div>
+</div>
+</div>
+</footer>
+<script id="navigationScript">
+document.addEventListener('DOMContentLoaded', function() {
+const mobileMenuButton = document.querySelector('.md\\:hidden');
+const mobileMenu = document.querySelector('.md\\:flex');
+if (mobileMenuButton && mobileMenu) {
+mobileMenuButton.addEventListener('click', function() {
+if (mobileMenu.classList.contains('hidden')) {
+mobileMenu.classList.remove('hidden');
+mobileMenu.classList.add('flex', 'flex-col', 'absolute', 'top-16', 'left-0', 'right-0', 'bg-black', 'p-4');
+} else {
+mobileMenu.classList.add('hidden');
+mobileMenu.classList.remove('flex', 'flex-col', 'absolute', 'top-16', 'left-0', 'right-0', 'bg-black', 'p-4');
+}
+});
+}
+});
+</script>
+<script id="serviceCardInteractions">
+document.addEventListener('DOMContentLoaded', function() {
+const serviceCards = document.querySelectorAll('.service-card');
+serviceCards.forEach(card => {
+card.addEventListener('mouseenter', function() {
+this.classList.add('shadow-lg');
+});
+card.addEventListener('mouseleave', function() {
+this.classList.remove('shadow-lg');
+});
+});
+});
+</script>
+</body>
+</html>
